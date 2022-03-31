@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.config.TopicBuilder;
 
 @Configuration
-public class KafkaConfig {
+public class KafkaTopicConfig {
     @Bean
     public NewTopic firstTopic (){
         return TopicBuilder.name("firsttopic").build();
@@ -15,5 +15,10 @@ public class KafkaConfig {
     @Bean
     public NewTopic secondTopic () {
     return TopicBuilder.name("secondtopic").build();
+    }
+
+    @Bean
+    public NewTopic messageTopic () {
+    return TopicBuilder.name("messagetopic").build();
     }
 }
